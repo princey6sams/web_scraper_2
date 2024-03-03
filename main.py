@@ -12,5 +12,5 @@ page = requests.get(url, headers=headers)
 
 soup = BeautifulSoup(page.content, 'html.parser')
 soup2 = soup.prettify()
-title = soup2.find().get_text()
+title = soup2.find(id="whatever").get_text()
 print (title)
